@@ -7,7 +7,7 @@ import Header from './Header';
 import { Title, TtileHome } from './Homepage'
 import Footer from './Footer';
 
-export default function Series() {
+export default function Series({isLoading = false, isError = false}) {
   const url = 'localhost:3000/sample.json'
   const data = axios.get(url).then(res => console.log(res))
   
@@ -21,7 +21,13 @@ export default function Series() {
           Popular Series
         </Title>
       </TtileHome>
-      <SeriesData datas={datas} />
+      {isLoading ? (
+        <div style={{minHeight: '50vh'}} className="mt-4 ml-2">Loading...</div>
+      ) : isError ? (
+        <div style={{minHeight: '50vh'}} className="mt-4 ml-2">Oops, something went wrong...</div>
+      ) : (
+        <SeriesData datas={datas} />
+      )}
       <Footer />
     </Container>
   )
