@@ -100,7 +100,7 @@ const S = {
     width: 200px;
     height: 45px;
     margin-top: 75px;
-    margin-left: 450px
+    margin-left: 850px
   `,
   PlayStore: styled(PlayStore)`
     width: 200px;
