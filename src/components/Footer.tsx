@@ -10,7 +10,7 @@ import { ReactComponent as PlayStore } from '../assets/store/play-store.svg';
 import { ReactComponent as WindowsStore } from '../assets/store/windows-store.svg';
 
 const optionMenu = [
-  {label: 'Home', path: "/home"},
+  {label: 'Home', path: "/"},
   {label: 'Terms and Condition', path: "#"},
   {label: 'Privacy Policy', path: "#"},
   {label: 'Collection Statement', path: "#"},
@@ -36,15 +36,21 @@ export default function Footer() {
               )
             })}
           </S.Col>
+        </Row>
+        <Row>  
           <S.Col>
             <S.Copyright>
               {`© ${year} PT Printerous Global. All Rights Reserved.`}
             </S.Copyright>
           </S.Col>
+        </Row>
+        <Row className="pt-5 mt-5">
           <S.Col>
             <S.Facebook />
             <S.Twitter />
             <S.Instagram />
+          </S.Col>
+          <S.Col>  
             <S.AppStore />
             <S.PlayStore />
             <S.WindowsStore />
@@ -57,11 +63,9 @@ export default function Footer() {
 
 const S = {
   Footer: styled.footer`
-    position: absolute;
-    padding: 50px 10px 10px 150px;
+    position: relative;
     bottom: 0;
     width: 100%;
-    /* Height of the footer*/ 
     height: 250px;
     background: #1e1e1e;
   `,
@@ -76,40 +80,33 @@ const S = {
     color: white;
   `,
   Col: styled(Col)`
-    text-align: left
+    text-align: left;
   `,
   Facebook: styled(Facebook)`
     width: 45px;
     height: 45px;
     margin-right: 28px;
-    margin-top: 75px;
   `,
   Instagram: styled(Instagram)`
     width: 45px;
     height: 45px;
     margin-right: 28px;
-    margin-top: 75px;
   `,
   Twitter: styled(Twitter)`
     width: 45px;
     height: 45px;
     margin-right: 28px;
-    margin-top: 75px;
   `,
   AppStore: styled(AppStore)`
     width: 200px;
     height: 45px;
-    margin-top: 75px;
-    margin-left: 850px
   `,
   PlayStore: styled(PlayStore)`
     width: 200px;
     height: 45px;
-    margin-top: 75px;
   `,
   WindowsStore: styled(WindowsStore)`
     width: 200px;
     height: 45px;
-    margin-top: 75px;
   `,
 }
