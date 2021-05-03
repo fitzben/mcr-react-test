@@ -22,41 +22,39 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <S.Footer>
-      <Container className="pt-4">
-        <Row>
-          <S.Col>
-            {optionMenu.map((menu) => {
-              return (
-                <S.LinkTo to={menu.path}>
-                  {/* <MenuTitle> */}
-                    {menu.label}
-                  {/* </MenuTitle> */}
-                </S.LinkTo>
-              )
-            })}
-          </S.Col>
-        </Row>
-        <Row>  
-          <S.Col>
-            <S.Copyright>
-              {`© ${year} PT Printerous Global. All Rights Reserved.`}
-            </S.Copyright>
-          </S.Col>
-        </Row>
-        <Row className="pt-5 mt-5">
-          <S.Col>
-            <S.Facebook />
-            <S.Twitter />
-            <S.Instagram />
-          </S.Col>
-          <S.Col>  
-            <S.AppStore />
-            <S.PlayStore />
-            <S.WindowsStore />
-          </S.Col>
-        </Row>
-      </Container>
+    <S.Footer className="py-4 px-5">
+      <Row>
+        <S.Col>
+          {optionMenu.map((menu) => {
+            return (
+              <S.LinkTo to={menu.path}>
+                {/* <MenuTitle> */}
+                  {menu.label}
+                {/* </MenuTitle> */}
+              </S.LinkTo>
+            )
+          })}
+        </S.Col>
+      </Row>
+      <Row>  
+        <S.Col>
+          <S.Copyright>
+            {`© ${year} PT Printerous Global. All Rights Reserved.`}
+          </S.Copyright>
+        </S.Col>
+      </Row>
+      <Row className="pt-5 mt-5">
+        <S.Col md={5}>
+          <S.Facebook />
+          <S.Twitter />
+          <S.Instagram />
+        </S.Col>
+        <S.Col md={7}>
+          <S.AppStore />
+          <S.PlayStore />
+          <S.WindowsStore />
+        </S.Col>
+      </Row>
     </S.Footer>
   )
 }

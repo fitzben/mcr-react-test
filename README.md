@@ -88,3 +88,11 @@ You may use whatever you like as long as the solution is built using [React](htt
 * [Bitbucket](https://bitbucket.org/) - Source code hosting, with free private repositories for small teams.
 * [Google Fonts - Raleway](https://fonts.google.com/?selection.family=Raleway)
 * [React](https://facebook.github.io/react/)
+
+## The Reason of Using Library
+* React-Router-Dom => is commonly use for routing, it can be navigate between different components, changing URL, modify history
+* React-Bootstrap => a library use for bootstrap and have components such as Button, Col, Row, Navbar
+* Typescript => a library who help us to maintain what data we want to use and where's not
+* Emotion => a library that can made an easy styled components
+* Axios => a JS library used to make HTTP request, and it's commonly use in other developers
+* Lodash => helps to maintain JS code with the tools that Lodash have

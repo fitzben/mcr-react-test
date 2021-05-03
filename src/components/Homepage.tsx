@@ -10,7 +10,7 @@ export default function Homepage() {
   return (
     <Container fluid>
       <Header />
-      <TtileHome>
+      <TtileHome className="px-5 py-3">
         <Title>
           Popular Title
         </Title>
@@ -29,7 +29,7 @@ function ImgContent() {
   ]
 
   return (
-    <Row className="pt-5">
+    <Row className="pt-5 px-5" style={{minHeight: '60vh'}}>
       {imgData.map((data) => {
         return (
           <Col className="flex-grow-0">
@@ -76,5 +76,4 @@ export const Title = styled.h3`
   font-size: 28px;
   color: white;
   text-align: left;
-  margin-left: 92px;
 `
